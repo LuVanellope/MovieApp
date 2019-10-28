@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bundle exec shotgun --port=3000 --host=0.0.0.0 config.ru
+    volumes: 
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+  database:
+    image: postgres:11.2
+    volumes:
+      - postgres_movie_data:/var/lib/postgresql/data
+        
+
+volumes:
+  postgres_movie_data:
+    driver: local
