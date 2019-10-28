@@ -7,3 +7,9 @@ gem 'shotgun'
 gem 'sequel'
 gem 'rake'
 gem 'pg'
+gem 'irb', require: false
+
+group :test do 
+  gem 'rack-test', require: "rack/test"
+  gem 'rspec'
+end
