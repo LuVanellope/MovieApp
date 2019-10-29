@@ -31,13 +31,13 @@ RSpec.describe MovieApp::API do
           expect(last_response).to be_ok
           expect(json_response.count).to eq(2)
           expect(json_response).to match_array([
-            a_hash_including( 
+            a_hash_including(
               "id"=>movie_2.id,
               "name"=>movie_2.name,
               "description"=>"Chiguagua",
               "url_image"=>"https://image.com/image.jpg"
             ),
-            a_hash_including( 
+            a_hash_including(
               "id"=>movie_3.id,
               "name"=>movie_3.name,
               "description"=>"Locos Admas what a Family",

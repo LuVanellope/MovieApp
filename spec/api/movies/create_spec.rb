@@ -18,7 +18,7 @@ RSpec.describe MovieApp::API do
       it "Should create a new movie" do
         post '/api/movies', input
 
-        expect(last_response.status).to eq(201) 
+        expect(last_response.status).to eq(201)
 
         expect(Movie.count).to eq(1)
 
