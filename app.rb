@@ -1,5 +1,6 @@
 require 'grape'
 require './models/movie'
+require './models/reservation'
 
 module MovieApp
   class API < Grape::API
